@@ -1,0 +1,14 @@
+{% extends "layout.html" %} {% block content %}
+<h1 class="page">Vous êtes dans la deuxième page web</h1>
+<p>
+  Flask est un micro Framework open-source de développement web en Python. Il
+  est classé comme micro Framework car il est très léger. <br />
+  Flask a pour objectif de garder un noyau simple mais extensible. Il n'intègre
+  pas de système d'authentification, pas de couche d'abstraction de base de
+  données, ni d'outil de validation de formulaires. Cependant, de nombreuses
+  extensions permettent d'ajouter facilement des fonctionnalités.
+</p>
+<a href="{{ url_for('home') }}">
+  Cliquer sur ce lien pour aller à la page suivante
+</a>
+{% endblock %}

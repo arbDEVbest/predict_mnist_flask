@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% block content %}
+
+<section id="upload">
+  <form
+    action="{{ url_for('show_csv') }}"
+    method="post"
+    enctype="multipart/form-data"
+    class="btn"
+  >
+    <div>
+      <label for="fichier">Selectionner le fichier:</label>
+      <input
+        type="file"
+        id="brows"
+        name="fichier"
+        accept="image/png, image/jpeg, .doc,.csv,
+                .docx,application/msword,
+                application/vnd.openxmlformats-officedocument.wordprocessingml.document,"
+      />
+    </div>
+    <div>
+      <select name="delimiter" id="separator">
+        <option value="">-----séparateur------</option>
+        <option value=",">Virgule</option>
+        <option value=";">point-virgule</option>
+        <option value=" ">Tabulation</option>
+        <option value=" ">Espace</option>
+      </select>
+    </div>
+    <div>
+      <button type="submit">Afficher les statistiques de la DataFrame</button>
+    </div>
+  </form>
+</section>
+{% if rest %}
+<section id="upload_table">
+  <div id="div_table1">
+    <h2>Le résumé des statistiques de la Series ou de la Dataframe</h2>
+    <table class="table">
+      <thead>
+        <tr class="table__header">
+          {% for head in describe_col%}
+          <th class="table__cell">{{ head }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for raw in describe_values %}
+        <tr class="table__raw">
+          {% for cel in raw %}
+          <td class="table__cell">{{ cel }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div id="div_table2">
+    <h2>
+      Les valeurs de corrélation entre chaque colonne et une colonne sur deux
+      dans le DataFrame.
+    </h2>
+    <table class="table corr">
+      <thead>
+        <tr class="table__header">
+          {% for head in corr_col%}
+          <th class="table__cell">{{ head }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for raw in coor_values %}
+        <tr class="table__raw">
+          {% for cel in raw %}
+          <td class="table__cell">{{ cel }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endif %} {% endblock %}

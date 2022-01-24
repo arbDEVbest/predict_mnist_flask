@@ -1,0 +1,18 @@
+{% extends "layout.html" %} {% block content %}
+<h2 class="users_list">Liste des utilisateurs</h2>
+<table class="table">
+  <tr class="table__header">
+    {% for head in col%}
+    <th class="table__cell">{{ head }}</th>
+    {% endfor %}
+  </tr>
+  {% for raw in data %}
+  <tr class="table__raw">
+    {% for cel in raw %}
+    <td class="table__cell">{{ cel }}</td>
+    {% endfor %}
+  </tr>
+
+  {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block content %}
+<section id="pageContent" class="oneCol contact">
+  <main>
+    <h1>Enregistrez-nous</h1>
+    <p>
+      Merci de compléter le formulaire suivant. Tous les champs de ce formulaire
+      sont requis.
+    </p>
+    <form action="{{url_for('formul')}}" method="post" id="frmContact">
+      <div>
+        <label for="civilite">Civilité :</label>
+        <select name="civil" id="civilite" required>
+          <option value="">--Please choose an option--</option>
+          <option value="Mme" selected>Mme</option>
+          <option value="Mr">Mr</option>
+        </select>
+      </div>
+      <div>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="user_name" required autofocus />
+      </div>
+      <div>
+        <label for="firstname">Prenom :</label>
+        <input type="text" id="firstname" name="prenom" required />
+      </div>
+      <div>
+        <label for="mail">e-mail :</label>
+        <input type="email" id="mail" name="user_mail" required />
+      </div>
+      <div>
+        <button type="submit">Envoyez</button>
+      </div>
+    </form>
+  </main>
+</section>
+{% endblock %}

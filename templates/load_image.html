@@ -1,0 +1,23 @@
+{% extends "layout.html" %} {% block content %}
+<style>
+  #predict h5 {
+    padding: 1rem;
+    color: blue;
+    font-size: x-large;
+  }
+</style>
+<section class="container">
+  <h1 class="text-center">Reconnaissance de chiffres manuscrits</h1>
+  <form class="p-3 text_center" action="{{url_for('predict')}}" method="post" , enctype="multipart/form-data">
+    <input class="form-control" type="file" , name="imageFile" />
+    <input class="myButton btn btn-primary mt-3" type="submit" value="Prediction de l'image" />
+  </form>
+  {% if prediction %}
+  <div id="predict">
+    <img src="{{image}}" alt="image du chiffre à prédire" width='20%'>
+    <h5 class='result_img'>Result : {{prediction}} </h5>
+  </div>
+  {% endif %}
+</section>
+
+{% endblock %}

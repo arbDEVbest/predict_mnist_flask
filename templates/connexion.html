@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block content %} {% if succes %}
+<div class="succes fade-out">
+  <p>{{succes}}</p>
+</div>
+{% elif erreur%}
+<div class="erreur fade-out">
+  <p>{{erreur}}</p>
+</div>
+{% else %} {% endif %}
+
+<section id="pageContent" class="oneCol contact">
+  <div class="list_user">
+    <form action="{{ url_for('select') }}" method="post">
+      <label for="list"></label>
+      <button type="submit" name="list">Affichez les utilisateurs</button>
+    </form>
+  </div>
+  <main>
+    <h1>Enregistrez-vous</h1>
+    <p>
+      Merci de compléter le formulaire suivant . Tous les champs de ce
+      formulaire sont requis.
+    </p>
+    <form id="frmContact" action="{{url_for('create')}}" method="post">
+      <div>
+        <select name="sexe">
+          <option value="">---selctionnez votre sexe---</option>
+          <option value="Masculin">Masculin</option>
+          <option value="Feminin">Feminin</option>
+        </select>
+        <div>
+          <label for="fName">Prénom</label>
+          <input type="text" name="fName" id="fName" required autofocus />
+        </div>
+        <div>
+          <label for="lName">Nom de famille</label>
+          <input type="text" name="lName" id="lName" required />
+        </div>
+        <div>
+          <label for="psudo">Votre Psudo</label>
+          <input type="text" name="psudo" required />
+        </div>
+      </div>
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
+</section>
+{% endblock %}

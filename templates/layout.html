@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename = 'css/normalize.css')}}"
+    />
+    <!-- Required CDNs for Fonts and Bootstrap -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename = 'css/style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename = 'css/form.css')}}"
+    />
+
+    <title>Apprendre flask</title>
+  </head>
+
+  <body>
+    <header id="mainHeader">
+      <nav id="mainNav">
+        <h1 class="accessibility">Menu principal</h1>
+        <p class="accessibility">
+          <a
+            href="#pageContent"
+            title="Accéder directement au contenu principal de cette page"
+            >Passer le menu</a
+          >
+        </p>
+        <ul>
+          <li>
+            <a
+              href="{{url_for('hello')}}"
+              title="Faire avec Flask une page internet sur laquelle est écrit 'Hello World !'"
+              target="index.html"
+              >Hello World 1 !</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{url_for('style')}}"
+              title="Faire avec Flask une page internet sur laquelle est écrit 'Hello World !' 
+                                        en passant par une page html et fichier css pour le style"
+              >Hello world avec Template</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{url_for('home')}}"
+              title="Faire avec Flask un site web contenant 2 pages "
+              >Rediredtion vers 2 page</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{url_for('Formulaire')}}"
+              title="Faire avec Flask une page qui contient un formulaire "
+              >Formulaire</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{url_for('crud')}}"
+              title="Apprendre la méthode pour inserer les donnée avec flask dans la base de donnée"
+              >Insertion donnée dans BD</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{url_for('export')}}"
+              title="Faire une page avec Flask qui affiche les statistiques de base 
+                                d'un dataframe que l'utilisateur aurait chargé grâce à un formulaire "
+              >Imports CSV</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{url_for('predict')}}"
+              title="Charger un modèle entrainé sur MNIST et 
+                                afficher la prédiction du modèle lorsque l’user charge une image via un formulaire."
+              >Import Img & Prediction</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button id="menuToggle">
+        <img src="/images/layout/hamburger.svg" alt="Ouvrir / Fermer le menu" />
+      </button>
+    </header>
+    <section class="container-fluid">
+      <div class="titre">
+        <h1>Introduction à Flask</h1>
+      </div>
+
+      <!--le contenue des pages web sont inserées ici-->
+      {% block content %} {% endblock %}
+    </section>
+    <!-- Other required CDNs -->
+    <script src="{{url_for('static', filename='js/jquery-3.4.1.min.js')}}"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{{url_for('static', filename='js/menu.js')}}"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    
+  </body>
+</html>
