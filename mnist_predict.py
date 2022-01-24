@@ -13,7 +13,8 @@ MODEL_FIC = MODEL_DIR/"model_knn.pkl"
 
 
 def predict_img(img):
-    model_train()
+    if not MODEL_FIC.exists():
+        model_train()
     # les dimension standard d'une image mnist.
     height, width = 28, 28
     model_knn = pd.read_pickle(MODEL_FIC)
