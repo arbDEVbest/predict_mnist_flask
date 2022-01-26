@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 
 # Importer la fonction pour convertir l'image
-from img_to_mnist import traitement_img
+from model.img_to_mnist import traitement_img
 from model.model import model_train
 #importer le modèle
 CUR_DIR = Path.cwd()
@@ -14,6 +14,7 @@ MODEL_FIC = MODEL_DIR/"model_knn.pkl"
 
 def predict_img(img):
     if not MODEL_FIC.exists():
+        MODEL_DIR.mkdir(exist_ok=True)
         model_train()
     # les dimension standard d'une image mnist.
     height, width = 28, 28

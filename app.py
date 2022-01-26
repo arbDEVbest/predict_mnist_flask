@@ -6,7 +6,7 @@ import pandas as pd
 import cv2
 from base64 import b64encode
 import numpy as np
-from mnist_predict import predict_img
+from model.mnist_predict import predict_img
 import PIL.Image as Image
 from pathlib import Path
 import json
