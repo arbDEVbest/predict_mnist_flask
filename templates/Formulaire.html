@@ -7,7 +7,7 @@
       sont requis.
     </p>
     <form action="{{url_for('formul')}}" method="post" id="frmContact">
-      <div>
+      <div class="col-12">
         <label for="civilite">Civilité :</label>
         <select name="civil" id="civilite" required>
           <option value="">--Please choose an option--</option>
@@ -15,19 +15,19 @@
           <option value="Mr">Mr</option>
         </select>
       </div>
-      <div>
+      <div class="col-12">
         <label for="name">Nom :</label>
         <input type="text" id="name" name="user_name" required autofocus />
       </div>
-      <div>
+      <div class="col-12">
         <label for="firstname">Prenom :</label>
         <input type="text" id="firstname" name="prenom" required />
       </div>
-      <div>
+      <div class="col-12">
         <label for="mail">e-mail :</label>
         <input type="email" id="mail" name="user_mail" required />
       </div>
-      <div>
+      <div class="col-12">
         <button type="submit">Envoyez</button>
       </div>
     </form>

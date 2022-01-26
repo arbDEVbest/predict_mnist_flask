@@ -21,10 +21,6 @@ body {
   font-family: Raleway, Verdana, san-serif;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 .accessibility {
   position: absolute;
   left: -15000px;
@@ -91,247 +87,17 @@ img {
   align-self: start;
   margin-left: auto;
 }
-#pageContent {
-  padding: 100px 20px;
-  min-height: 100vh;
-  background-image: url(../images/blogArticle.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
 main {
   background-color: rgba(155, 155, 155, 0.8);
   padding: 20px;
   color: var(--white);
 }
-#pageContent.home {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-#pageContent.home #pictInfo {
-  background-color: rgba(155, 155, 155, 0.8);
-  padding: 40px;
-  color: var(--white);
-  width: 300px;
-  height: 300px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end;
-}
-#pageContent.home #pictInfo h1 {
-  font-family: Cantarell, Arial, sans-serif;
-  font-size: 1.2em;
-  margin: 10px 0;
-}
-#pageContent.home #pictInfo p {
-  margin: 10px 0;
-  font-size: 0.8em;
-}
-#pageContent.twoCols {
-  display: grid;
-  grid-gap: 20px;
-}
-#pageContent.blogList #leftCol {
-  display: grid;
-  grid-gap: 20px;
-  background-color: rgba(155, 155, 155, 0.8);
-  padding: 20px;
-}
-#pageContent.blogList #leftCol article {
-  padding: 20px;
-  color: var(--black);
-}
-.page {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 2em;
-  color: rgb(33, 24, 168);
-}
-
-#pageContent.blogList #leftCol article header {
-  border-bottom: 1px solid var(--black);
-}
-#pageContent.blogList #leftCol article header h1 {
-  margin: 0;
-  color: var(--green);
-  font-size: 1.3em;
-}
-#pageContent.blogList #leftCol article header p {
-  font-size: 0.8em;
-  font-style: italic;
-}
-#pageContent.blogList #leftCol article a {
-  color: var(--blue);
-  text-decoration: none;
-}
-#pageContent.blogList #leftCol article a:hover {
-  text-decoration: underline;
-}
-#pageContent.blogList #leftCol article:nth-child(even) {
-  background-color: var(--shaded-blue);
-}
-#pageContent.blogList #leftCol article:nth-child(odd) {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-#pageContent.blog #rightCol {
-  background-color: var(--blue);
-  padding: 20px;
-  align-self: start;
-}
-#pageContent.blog #rightCol section {
-  border-bottom: 1px solid var(--white);
-  padding-bottom: 20px;
-}
-#pageContent.blog #rightCol section > h1 {
-  color: var(--white);
-  font-size: 1.3em;
-}
-#pageContent.blog #rightCol #blogSearch input {
-  width: 100%;
-  border-radius: 10px;
-}
-#pageContent.blog #rightCol ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-#pageContent.blog #rightCol ul li,
-#pageContent.blog #rightCol h2 {
-  background-color: var(--white);
-}
-
-#pageContent.blog #rightCol ul li:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-#pageContent.blog #rightCol h2 {
-  font-size: 1em;
-}
-#pageContent.blog #rightCol li a,
-#pageContent.blog #rightCol h2 a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--black);
-  text-decoration: none;
-  padding: 5px;
-}
-#pageContent.blog #rightCol li a span,
-#pageContent.blog #rightCol h2 span {
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: var(--blue);
-  color: var(--white);
-}
-#pageContent.blog #rightCol h2 ~ ul li a {
-  padding-left: 20px;
-}
-#pageContent.blog #rightCol li a:hover,
-#pageContent.blog #rightCol h2 a:hover {
-  background-color: var(--shaded-blue);
-}
-#pageContent.blog #rightCol li a:hover span,
-#pageContent.blog #rightCol h2 a:hover span {
-  background-color: var(--white);
-  color: var(--blue);
-}
-#pageContent.blog #rightCol ul li:first-child,
-#pageContent.blog #rightCol ul li:first-child a:hover {
-  border-radius: 10px 10px 0 0;
-}
-#pageContent.blog #rightCol ul li:last-child,
-#pageContent.blog #rightCol ul li:last-child a:hover {
-  border-radius: 0 0 10px 10px;
-}
-#pageContent.blog #rightCol h2,
-#pageContent.blog #rightCol h2 a:hover {
-  border-radius: 10px;
-}
-#pageContent.text h1 {
-  font-size: 1.8em;
-  color: var(--blue);
-  letter-spacing: 0.1em;
-}
-#pageContent.text h2 {
-  font-size: 1.5em;
-  font-weight: normal;
-  letter-spacing: 0.1em;
-  margin-top: 50px;
-}
-#pageContent.text a {
-  color: var(--black);
-  text-decoration: none;
-}
-#pageContent.text a:hover {
-  text-decoration: underline;
-}
-#pageContent.text img {
-  max-width: 100%;
-  height: auto;
-}
-#pageContent.text .alignLeft {
-  float: left;
-  margin: 0 10px 10px 0;
-}
-#pageContent.text .alignRight {
-  float: right;
-  margin: 0 0 10px 10px;
-}
-#pageContent.text h2 {
-  clear: both;
-}
-#pageContent.text dl {
-  border: 1px solid var(--black);
-  border-radius: 10px;
-  background-color: var(--white);
-  padding: 20px;
-  color: var(--black);
-}
-#pageContent.text dl dt {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-#pageContent.text dl dd {
-  margin: 10px 0 10px 20px;
-}
-#pageContent.text table {
-  border-collapse: collapse;
-  margin: 50px 0;
-}
-#pageContent.text table caption {
-  padding: 10px 20px;
-  color: var(--black);
-  font-weight: bold;
-}
-#pageContent.text table thead,
-#pageContent.text table tfoot {
-  background-color: var(--blue);
-}
-#pageContent.text table tbody tr:nth-child(even) {
-  background-color: var(--shaded-blue);
-}
-#pageContent.text table td,
-#pageContent.text table th {
-  border: 1px solid var(--white);
-  padding: 20px;
-}
-#pageContent.text table tfoot {
-  font-size: 0.8em;
-  font-style: italic;
-  text-align: center;
-}
 
 #pageContent.contact form {
-  display: grid;
+  /*display: grid;*/
   border-top: solid 1px var(--white);
 }
 #pageContent.contact form > div > div {
-  display: flex;
-  flex-flow: column nowrap;
   margin: 20px 0;
 }
 #pageContent.contact form > div:last-child > div:first-child {
@@ -342,10 +108,6 @@ main {
   font-size: 1.1em;
   display: flex;
   justify-content: space-between;
-}
-#pageContent.contact form textarea {
-  height: 150px;
-  resize: none;
 }
 #pageContent.contact form button {
   padding: 10px;
@@ -360,83 +122,12 @@ main {
 #pageContent.contact form button:active {
   background-color: var(--blue);
 }
-#pageContent.contact form .msg {
-  font-size: 0.8em;
-  color: rgb(88, 1, 1);
-  margin-left: 20px;
-}
 #pageContent.contact form input,
-#pageContent.contact form textarea {
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid rgb(162, 162, 255);
-}
 #pageContent.contact form input:valid,
-#pageContent.contact form textarea:valid {
-  border: 1px solid var(--green);
-}
-#pageContent.contact form input.invalid,
-#pageContent.contact form textarea.invalid {
+#pageContent.contact form input.invalid {
   border: 1px solid var(--blue);
 }
-#pageContent.galleries ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  align-items: start;
-  grid-auto-flow: row;
-  grid-gap: 20px;
-}
-#pageContent.galleries ul li {
-  background-color: var(--white);
-  padding: 10px;
-}
-#pageContent.galleries ul li:hover {
-  background-color: var(--shaded-blue);
-}
-#pageContent.galleries ul li a {
-  color: var(--black);
-  text-decoration: none;
-}
 
-#pageContent.galleries #galleryContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 1s, visibility 1s;
-}
-#pageContent.galleries #galleryContainer img {
-  border: solid 5px var(--white);
-  max-width: 80%;
-  height: auto;
-}
-#pageContent.galleries #galleryContainer.visible {
-  opacity: 1;
-  visibility: visible;
-}
-#mainFooter {
-  background-color: var(--blue);
-  height: 40px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  color: var(--white);
-  font-size: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 #upload {
   font-family: "MV Boli", Cochin, Georgia, Times, "Times New Roman", serif;
   background-color: rgb(102, 155, 235);
@@ -521,6 +212,89 @@ td:hover {
   margin-top: 15px;
   width: 80%;
   padding: 10px;
+}
+.reponse p {
+  /*border: 1px solid rgb(35, 173, 46);*/
+  background-color: lawngreen;
+}
+.reponse a:link {
+  padding: 5px;
+  border: 1px solid lightseagreen;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  text-decoration: none;
+  margin-left: 10px;
+  color: white;
+}
+.succes p {
+  font-family: "MV Boli", Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px;
+  background-color: yellowgreen;
+  animation: fade-in 3s ease;
+}
+.erreur p {
+  font-family: "MV Boli", Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px;
+  background-color: rgb(241, 59, 59);
+  animation: fade-in 3s ease;
+}
+.list_user button {
+  margin: 10px;
+  border-radius: 10px;
+}
+.users_list {
+  text-align: center;
+  color: white;
+  background-color: #8bb691;
+  padding: 1rem;
+}
+
+.table {
+  margin: 5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+.table__raw:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.table__header {
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+.table__cell {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+td:hover {
+  background-color: #ddd;
+}
+.fade-out {
+  animation: fade-out 2s ease 3s forwards;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {

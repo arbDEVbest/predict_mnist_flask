@@ -1,4 +1,45 @@
-{% extends "layout.html" %} {% block content %} {% if succes %}
+{% extends "layout.html" %} {% block content %}
+<style>
+  .succes p {
+    font-family: "MV Boli", Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px;
+    background-color: yellowgreen;
+    animation: fade-in 3s ease;
+  }
+  .erreur p {
+    font-family: "MV Boli", Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px;
+    background-color: rgb(241, 59, 59);
+    animation: fade-in 3s ease;
+  }
+  .fade-out {
+    animation: fade-out 2s ease 3s forwards;
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
+
+{% if succes %}
 <div class="succes fade-out">
   <p>{{succes}}</p>
 </div>
@@ -21,22 +62,27 @@
       Merci de compléter le formulaire suivant . Tous les champs de ce
       formulaire sont requis.
     </p>
-    <form id="frmContact" action="{{url_for('create')}}" method="post">
-      <div>
+    <form
+      class="row"
+      id="frmContact"
+      action="{{url_for('create')}}"
+      method="post"
+    >
+      <div class="col-12">
         <select name="sexe">
           <option value="">---selctionnez votre sexe---</option>
           <option value="Masculin">Masculin</option>
           <option value="Feminin">Feminin</option>
         </select>
-        <div>
+        <div class="col-12">
           <label for="fName">Prénom</label>
           <input type="text" name="fName" id="fName" required autofocus />
         </div>
-        <div>
+        <div class="col-12">
           <label for="lName">Nom de famille</label>
           <input type="text" name="lName" id="lName" required />
         </div>
-        <div>
+        <div class="col-12">
           <label for="psudo">Votre Psudo</label>
           <input type="text" name="psudo" required />
         </div>
